@@ -7,10 +7,15 @@
 	<title>Page1</title>
 </head>
 <body>
-	这里是page2
+	这里是page1
+	<button onclick="openPage()">打开page2</button>
 
 	<script>
-		alert('cookie'+document.cookie);
+		const openPage = () => {
+			document.domain = 'github.io';
+			document.cookie = "myphone=" + 13222222222;
+			window.open('http://localhost:5501/page2.html')
+		}
 	</script>
 </body>
 </html>
